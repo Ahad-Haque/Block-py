@@ -22,7 +22,7 @@ def draw_game():
           pygame.display.update()
 
 while run:
-      pygame.time.delay(10)
+      pygame.time.delay(30)
       if baddyX < x - 10:
           baddyX = baddyX + baddyVel
       elif baddyX > x + 10:
@@ -50,7 +50,6 @@ while run:
           x = random.randint(0,1000)
           y = random.randint(0,500)
           pygame.draw.rect(win, (0, 0, 255), (x, y, 20, 20))
-          pygame.mixer.music.stop()
       
       for event in pygame.event.get():
             if event.type == pygame.QUIT:
